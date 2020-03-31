@@ -32,7 +32,7 @@ while True:
     coord[2] = coord[2] - coord[0]  # with -8 as an offset on each side, thanks windows
 
     if keyboard.is_pressed('ctrl + alt + up'):
-        win32gui.MoveWindow(hwnd, coord[0] - 8, coord[1] - 8, coord[2] + 16, int(coord[3]/2), True)
+        win32gui.MoveWindow(hwnd, coord[0] - 8, coord[1] - 8, coord[2] + 16, int(coord[3]/2) + 8, True)
     if keyboard.is_pressed('ctrl + alt + down'):
         win32gui.MoveWindow(hwnd, coord[0] - 8, coord[1] + int(coord[3] / 2) - 8, coord[2] + 16, int(coord[3] / 2) + 16, True)
 
