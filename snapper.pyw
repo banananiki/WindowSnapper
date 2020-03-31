@@ -3,6 +3,8 @@ import win32api
 import keyboard
 from win32con import MONITOR_DEFAULTTONEAREST
 
+import time
+
 # we want to move the active window
 # Python script to snap windows to upper/lower half of the screen to use especially for monitors used in portrait mode
 while True:
@@ -33,6 +35,8 @@ while True:
         win32gui.MoveWindow(hwnd, coord[0] - 8, coord[1] - 8, coord[2] + 16, int(coord[3]/2), True)
     if keyboard.is_pressed('ctrl + alt + down'):
         win32gui.MoveWindow(hwnd, coord[0] - 8, coord[1] + int(coord[3] / 2) - 8, coord[2] + 16, int(coord[3] / 2) + 16, True)
+
+    time.sleep(0.1)
 
 
 
